@@ -1,0 +1,30 @@
+# ============================================================
+#  Render Blueprint — ПроксиИндекс (proxyindex.ru), статичный сайт.
+#  Собирается на Маке (proxy_rating/build.py), сюда приходит готовая папка public/:
+#  автопилот статей (autopilot/ap.py deploy) копирует site/ → public/, коммитит и пушит,
+#  Render выкатывает сам (autoDeploy). Сборки на стороне Render нет.
+# ============================================================
+services:
+  - type: web
+    name: proxyindex
+    runtime: static
+    buildCommand: echo "prebuilt on Mac"
+    staticPublishPath: ./public
+    autoDeploy: true
+    pullRequestPreviewsEnabled: false
+    domains:
+      - proxyindex.ru
+      - www.proxyindex.ru
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /files/*
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /badge/*
+        name: Cache-Control
+        value: public, max-age=86400
