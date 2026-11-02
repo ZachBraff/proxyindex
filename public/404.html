@@ -16,16 +16,18 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <link rel="alternate" type="application/rss+xml" title="ПроксиИндекс — статьи" href="/stati/rss.xml">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__motion)document.documentElement.classList.add("no-motion")},3000)</script>
 
 </head>
 <body>
 <header class="top">
   <div class="wrap top-in">
     <a class="logo" href="/"><span class="logo-mark" aria-hidden="true"></span>ПроксиИндекс</a>
-    <nav class="menu" aria-label="Разделы">
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Разделы">
       <a href="/">Рейтинг</a>
       <details class="dd"><summary>По типам</summary><div class="dd-in"><a href="/reiting/rezidentskie-proksi/">Резидентские</a><a href="/reiting/mobilnye-proksi/">Мобильные</a><a href="/reiting/servernye-proksi-ipv4/">Серверные IPv4</a><a href="/reiting/ipv6-proksi/">IPv6</a><a href="/reiting/isp-proksi/">ISP</a><a href="/reiting/proksi-dlya-yurlic/">Для юрлиц</a></div></details>
       <a href="/metodika/">Методика</a>
