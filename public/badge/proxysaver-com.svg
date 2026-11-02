@@ -1,6 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="260" height="58" viewBox="0 0 260 58" role="img" aria-label="20-е место — ПроксиИндекс 2026">
-<rect width="260" height="58" rx="10" fill="#0f2a24"/>
-<rect x="12" y="15" width="22" height="22" rx="6" fill="#2f9c81"/><circle cx="33" cy="36" r="4.5" fill="#f2b84b" stroke="#0f2a24" stroke-width="2"/>
-<text x="46" y="25" font-family="Golos Text,Arial,sans-serif" font-size="10.5" fill="#a9c7bd">ПроксиИндекс · рейтинг прокси 2026</text>
-<text x="46" y="43" font-family="Golos Text,Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff">20-е место · для бизнеса</text>
+<defs><linearGradient id="bgold" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#fbeab0"/><stop offset=".28" stop-color="#e6bb58"/><stop offset=".52" stop-color="#b8832a"/>
+  <stop offset=".72" stop-color="#f1d082"/><stop offset="1" stop-color="#a26f1e"/></linearGradient><linearGradient id="bgoldv" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#fdeeb8"/><stop offset=".45" stop-color="#e2b14f"/><stop offset="1" stop-color="#9f6c1c"/></linearGradient><linearGradient id="bsilv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f8f6"/><stop offset=".5" stop-color="#c6d2ce"/><stop offset="1" stop-color="#8b9a95"/></linearGradient><linearGradient id="bbron" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8d6b2"/><stop offset=".5" stop-color="#d99c63"/><stop offset="1" stop-color="#9a5f2c"/></linearGradient><radialGradient id="bemer" cx=".3" cy=".25" r="1"><stop offset="0" stop-color="#17705c"/><stop offset=".55" stop-color="#0b3f33"/><stop offset="1" stop-color="#05201a"/></radialGradient><linearGradient id="bshine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="bbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b2a21"/><stop offset="1" stop-color="#06130f"/></linearGradient></defs>
+<rect width="260" height="58" rx="12" fill="url(#bbg)"/><rect x=".5" y=".5" width="259" height="57" rx="11.5" fill="none" stroke="url(#bgold)" stroke-opacity=".55"/>
+<g transform="translate(8 7) scale(.69)"><polygon points="62.50,32.00 60.12,35.17 61.74,38.79 58.71,41.35 59.48,45.23 55.96,47.06 55.85,51.02 52.01,52.01 51.02,55.85 47.06,55.96 45.23,59.48 41.35,58.71 38.79,61.74 35.17,60.12 32.00,62.50 28.83,60.12 25.21,61.74 22.65,58.71 18.77,59.48 16.94,55.96 12.98,55.85 11.99,52.01 8.15,51.02 8.04,47.06 4.52,45.23 5.29,41.35 2.26,38.79 3.88,35.17 1.50,32.00 3.88,28.83 2.26,25.21 5.29,22.65 4.52,18.77 8.04,16.94 8.15,12.98 11.99,11.99 12.98,8.15 16.94,8.04 18.77,4.52 22.65,5.29 25.21,2.26 28.83,3.88 32.00,1.50 35.17,3.88 38.79,2.26 41.35,5.29 45.23,4.52 47.06,8.04 51.02,8.15 52.01,11.99 55.85,12.98 55.96,16.94 59.48,18.77 58.71,22.65 61.74,25.21 60.12,28.83" fill="url(#bgold)"/><circle cx="32" cy="32" r="25.4" fill="url(#bemer)"/><circle cx="32" cy="32" r="25.4" fill="url(#bshine)"/>
+<circle cx="32" cy="32" r="23.6" fill="none" stroke="url(#bgold)" stroke-width=".9" stroke-opacity=".85"/>
+<rect x="19.6" y="31" width="7.4" height="12.5" rx="1.4" fill="url(#bsilv)"/>
+<rect x="28.3" y="24" width="7.4" height="19.5" rx="1.4" fill="url(#bgoldv)"/>
+<rect x="37" y="35" width="7.4" height="8.5" rx="1.4" fill="url(#bbron)"/>
+<rect x="17.5" y="44" width="29" height="1.3" rx=".65" fill="url(#bgold)"/>
+<path d="M32 13.0 L33.176 16.024 L36.2 17.2 L33.176 18.375999999999998 L32 21.4 L30.823999999999998 18.375999999999998 L27.8 17.2 L30.823999999999998 16.024Z" fill="url(#bgold)"/></g>
+<text x="58" y="25" font-family="Playfair Display,Georgia,serif" font-size="13" font-weight="800" fill="#ffffff">ПроксиИндекс · 2026</text>
+<text x="58" y="43" font-family="Golos Text,Arial,sans-serif" font-size="14" font-weight="700" fill="#e6bb58">20-е место · для бизнеса</text>
 </svg>

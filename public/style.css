@@ -515,6 +515,19 @@ body:has(.hero-home) .top:not(.past) .menu > a.nav-cta:hover { background: #fff;
   .js body:has(.hero-home) .top .menu > a.nav-cta { background: var(--ink); color: var(--bg); }
 }
 
+
+/* ── логотип: медаль «печать + пьедестал» и надпись Playfair ─────── */
+.logo { gap: 11px; }
+img.logo-mark { width: 36px; height: 36px; border-radius: 50%; background: none; box-shadow: 0 6px 14px -6px rgba(6,19,15,.55);
+  transition: transform .7s var(--ease-out), filter .4s; }
+img.logo-mark::after { content: none; }
+.logo .wm { font-family: "Playfair Display", Georgia, "Times New Roman", serif; font-weight: 800; font-size: 23px; letter-spacing: .005em; line-height: 1; }
+.logo:hover img.logo-mark { transform: rotate(-14deg) scale(1.07); filter: brightness(1.08) saturate(1.1); }
+.logo.small img.logo-mark { width: 44px; height: 44px; }
+.logo.small .wm { font-size: 24px; color: #fff; display: block; }
+.tagline { display: block; font-family: var(--font); font-size: 10.5px; letter-spacing: .26em; text-transform: uppercase; font-weight: 600; color: var(--gold); margin-top: 5px; }
+@media (max-width: 760px) { img.logo-mark { width: 32px; height: 32px; } .logo .wm { font-size: 21px; } }
+
 /* ── адаптив ─────────────────────────────────────────────────────── */
 @media (max-width: 980px) {
   .hero-home .hero-txt::before { display: none; }
