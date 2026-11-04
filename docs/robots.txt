@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://proxyindex.ru/sitemap.xml
+Sitemap: https://proxyindex.pro/sitemap.xml

@@ -6,52 +6,52 @@
 
 ## Общий рейтинг (балл из 100)
 
-1. [Proxy.Market](https://proxyindex.ru/servis/proxy-market/) — 97 баллов; счёт для юрлиц + ЭДО
-2. [MobileProxy.Space](https://proxyindex.ru/servis/mobileproxy-space/) — 83 баллов; счёт для юрлиц + ЭДО
-3. [Proxeon](https://proxyindex.ru/servis/proxeon-net/) — 83 баллов; счёт для юрлиц + ЭДО
-4. [ProxyMania](https://proxyindex.ru/servis/proxymania-su/) — 83 баллов; счёт для юрлиц
-5. [PapaProxy](https://proxyindex.ru/servis/papaproxy-net/) — 78 баллов; счёт для юрлиц + ЭДО
-6. [Proxy-Seller](https://proxyindex.ru/servis/proxy-seller-com/) — 76 баллов; счёт для юрлиц
-7. [Proxy-Store](https://proxyindex.ru/servis/proxy-store-com/) — 76 баллов; счёт для юрлиц
-8. [Geonix](https://proxyindex.ru/servis/geonix-com/) — 75 баллов; счёт для юрлиц
-9. [Arendaproxy](https://proxyindex.ru/servis/arendaproxy-ru/) — 72 баллов; счёт для юрлиц + ЭДО
-10. [FineProxy](https://proxyindex.ru/servis/fineproxy-org/) — 70 баллов; счёт для юрлиц + ЭДО
-11. [Proxy-Solutions](https://proxyindex.ru/servis/proxy-solutions-net/) — 68 баллов; счёт для юрлиц
-12. [Proxy-IPv4](https://proxyindex.ru/servis/proxy-ipv4-com/) — 67 баллов; счёт для юрлиц
-13. [ASocks](https://proxyindex.ru/servis/asocks-com/) — 66 баллов; без подтверждённой оплаты по счёту
-14. [GonzoProxy](https://proxyindex.ru/servis/gonzoproxy-com/) — 66 баллов; счёт для юрлиц
-15. [RuCaptcha Proxy](https://proxyindex.ru/servis/rucaptcha-com/) — 65 баллов; без подтверждённой оплаты по счёту
-16. [Froxy](https://proxyindex.ru/servis/froxy-com/) — 64 баллов; без подтверждённой оплаты по счёту
-17. [FloppyData](https://proxyindex.ru/servis/floppydata-com/) — 63 баллов; без подтверждённой оплаты по счёту
-18. [ProxyWing](https://proxyindex.ru/servis/proxywing-com/) — 61 баллов; без подтверждённой оплаты по счёту
-19. [Astroproxy](https://proxyindex.ru/servis/astroproxy-com/) — 60 баллов; без подтверждённой оплаты по счёту
-20. [Proxy Saver](https://proxyindex.ru/servis/proxysaver-com/) — 60 баллов; без подтверждённой оплаты по счёту
-21. [MangoProxy](https://proxyindex.ru/servis/mangoproxy-com/) — 58 баллов; без подтверждённой оплаты по счёту
-22. [Proxys.World](https://proxyindex.ru/servis/proxys-world/) — 58 баллов; без подтверждённой оплаты по счёту
-23. [SX.ORG](https://proxyindex.ru/servis/sx-org/) — 56 баллов; без подтверждённой оплаты по счёту
-24. [Proxys.io](https://proxyindex.ru/servis/proxys-io/) — 55 баллов; без подтверждённой оплаты по счёту
-25. [ProxyLine](https://proxyindex.ru/servis/proxyline-net/) — 51 баллов; счёт для юрлиц
-26. [ProxyWhite](https://proxyindex.ru/servis/proxywhite-com/) — 45 баллов; без подтверждённой оплаты по счёту
-27. [GetProxy](https://proxyindex.ru/servis/getproxy-io/) — 42 баллов; без подтверждённой оплаты по счёту
-28. [SpaceProxy](https://proxyindex.ru/servis/spaceproxy-net/) — 39 баллов; без подтверждённой оплаты по счёту
-29. [Proxyma](https://proxyindex.ru/servis/proxyma-io/) — 37 баллов; без подтверждённой оплаты по счёту
-30. [Proxy6](https://proxyindex.ru/servis/proxy6-net/) — 30 баллов; без подтверждённой оплаты по счёту
+1. [Proxy.Market](https://proxyindex.pro/servis/proxy-market/) — 97 баллов; счёт для юрлиц + ЭДО
+2. [MobileProxy.Space](https://proxyindex.pro/servis/mobileproxy-space/) — 83 баллов; счёт для юрлиц + ЭДО
+3. [Proxeon](https://proxyindex.pro/servis/proxeon-net/) — 83 баллов; счёт для юрлиц + ЭДО
+4. [ProxyMania](https://proxyindex.pro/servis/proxymania-su/) — 83 баллов; счёт для юрлиц
+5. [PapaProxy](https://proxyindex.pro/servis/papaproxy-net/) — 78 баллов; счёт для юрлиц + ЭДО
+6. [Proxy-Seller](https://proxyindex.pro/servis/proxy-seller-com/) — 76 баллов; счёт для юрлиц
+7. [Proxy-Store](https://proxyindex.pro/servis/proxy-store-com/) — 76 баллов; счёт для юрлиц
+8. [Geonix](https://proxyindex.pro/servis/geonix-com/) — 75 баллов; счёт для юрлиц
+9. [Arendaproxy](https://proxyindex.pro/servis/arendaproxy-ru/) — 72 баллов; счёт для юрлиц + ЭДО
+10. [FineProxy](https://proxyindex.pro/servis/fineproxy-org/) — 70 баллов; счёт для юрлиц + ЭДО
+11. [Proxy-Solutions](https://proxyindex.pro/servis/proxy-solutions-net/) — 68 баллов; счёт для юрлиц
+12. [Proxy-IPv4](https://proxyindex.pro/servis/proxy-ipv4-com/) — 67 баллов; счёт для юрлиц
+13. [ASocks](https://proxyindex.pro/servis/asocks-com/) — 66 баллов; без подтверждённой оплаты по счёту
+14. [GonzoProxy](https://proxyindex.pro/servis/gonzoproxy-com/) — 66 баллов; счёт для юрлиц
+15. [RuCaptcha Proxy](https://proxyindex.pro/servis/rucaptcha-com/) — 65 баллов; без подтверждённой оплаты по счёту
+16. [Froxy](https://proxyindex.pro/servis/froxy-com/) — 64 баллов; без подтверждённой оплаты по счёту
+17. [FloppyData](https://proxyindex.pro/servis/floppydata-com/) — 63 баллов; без подтверждённой оплаты по счёту
+18. [ProxyWing](https://proxyindex.pro/servis/proxywing-com/) — 61 баллов; без подтверждённой оплаты по счёту
+19. [Astroproxy](https://proxyindex.pro/servis/astroproxy-com/) — 60 баллов; без подтверждённой оплаты по счёту
+20. [Proxy Saver](https://proxyindex.pro/servis/proxysaver-com/) — 60 баллов; без подтверждённой оплаты по счёту
+21. [MangoProxy](https://proxyindex.pro/servis/mangoproxy-com/) — 58 баллов; без подтверждённой оплаты по счёту
+22. [Proxys.World](https://proxyindex.pro/servis/proxys-world/) — 58 баллов; без подтверждённой оплаты по счёту
+23. [SX.ORG](https://proxyindex.pro/servis/sx-org/) — 56 баллов; без подтверждённой оплаты по счёту
+24. [Proxys.io](https://proxyindex.pro/servis/proxys-io/) — 55 баллов; без подтверждённой оплаты по счёту
+25. [ProxyLine](https://proxyindex.pro/servis/proxyline-net/) — 51 баллов; счёт для юрлиц
+26. [ProxyWhite](https://proxyindex.pro/servis/proxywhite-com/) — 45 баллов; без подтверждённой оплаты по счёту
+27. [GetProxy](https://proxyindex.pro/servis/getproxy-io/) — 42 баллов; без подтверждённой оплаты по счёту
+28. [SpaceProxy](https://proxyindex.pro/servis/spaceproxy-net/) — 39 баллов; без подтверждённой оплаты по счёту
+29. [Proxyma](https://proxyindex.pro/servis/proxyma-io/) — 37 баллов; без подтверждённой оплаты по счёту
+30. [Proxy6](https://proxyindex.pro/servis/proxy6-net/) — 30 баллов; без подтверждённой оплаты по счёту
 
 ## Рейтинги по типам
 
-- [Рейтинг резидентских прокси для бизнеса](https://proxyindex.ru/reiting/rezidentskie-proksi/)
-- [Рейтинг мобильных прокси для бизнеса](https://proxyindex.ru/reiting/mobilnye-proksi/)
-- [Рейтинг серверных прокси IPv4](https://proxyindex.ru/reiting/servernye-proksi-ipv4/)
-- [Рейтинг IPv6-прокси](https://proxyindex.ru/reiting/ipv6-proksi/)
-- [Рейтинг ISP-прокси (статических резидентских)](https://proxyindex.ru/reiting/isp-proksi/)
-- [Прокси для юрлиц: оплата по счёту и закрывающие документы](https://proxyindex.ru/reiting/proksi-dlya-yurlic/)
+- [Рейтинг резидентских прокси для бизнеса](https://proxyindex.pro/reiting/rezidentskie-proksi/)
+- [Рейтинг мобильных прокси для бизнеса](https://proxyindex.pro/reiting/mobilnye-proksi/)
+- [Рейтинг серверных прокси IPv4](https://proxyindex.pro/reiting/servernye-proksi-ipv4/)
+- [Рейтинг IPv6-прокси](https://proxyindex.pro/reiting/ipv6-proksi/)
+- [Рейтинг ISP-прокси (статических резидентских)](https://proxyindex.pro/reiting/isp-proksi/)
+- [Прокси для юрлиц: оплата по счёту и закрывающие документы](https://proxyindex.pro/reiting/proksi-dlya-yurlic/)
 
 ## Методика
 
-- [Как считается рейтинг](https://proxyindex.ru/metodika/)
-- [Об авторе](https://proxyindex.ru/o-proekte/)
-- [Отчёт PDF: рейтинг прокси для бизнеса 2026](https://proxyindex.ru/otchet/)
+- [Как считается рейтинг](https://proxyindex.pro/metodika/)
+- [Об авторе](https://proxyindex.pro/o-proekte/)
+- [Отчёт PDF: рейтинг прокси для бизнеса 2026](https://proxyindex.pro/otchet/)
 
 ## Статьи
 
-- [Как выбрать прокси для компании: задача, тип, условия](https://proxyindex.ru/stati/kak-vybrat-proksi-dlya-kompanii/): Порядок выбора прокси для компании: задача, тип адресов, условия сервиса для юрлиц, тест на своей площадке и данные о 30 сервисах.
+- [Как выбрать прокси для компании: задача, тип, условия](https://proxyindex.pro/stati/kak-vybrat-proksi-dlya-kompanii/): Порядок выбора прокси для компании: задача, тип адресов, условия сервиса для юрлиц, тест на своей площадке и данные о 30 сервисах.

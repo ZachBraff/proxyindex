@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
 <title>ПроксиИндекс — статьи о выборе прокси для бизнеса</title>
-<link>https://proxyindex.ru/stati/</link>
+<link>https://proxyindex.pro/stati/</link>
 <description>Гайды, инструкции и сравнения прокси-сервисов для компаний: данные открытого рейтинга и первоисточники.</description>
 <language>ru</language>
 <lastBuildDate>Sat, 31 Oct 2026 09:00:00 +0300</lastBuildDate>
-<atom:link href="https://proxyindex.ru/stati/rss.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="https://proxyindex.pro/stati/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
   <title>Как выбрать прокси для компании: задача, тип, условия</title>
-  <link>https://proxyindex.ru/stati/kak-vybrat-proksi-dlya-kompanii/</link>
-  <guid isPermaLink="true">https://proxyindex.ru/stati/kak-vybrat-proksi-dlya-kompanii/</guid>
+  <link>https://proxyindex.pro/stati/kak-vybrat-proksi-dlya-kompanii/</link>
+  <guid isPermaLink="true">https://proxyindex.pro/stati/kak-vybrat-proksi-dlya-kompanii/</guid>
   <pubDate>Sat, 31 Oct 2026 09:00:00 +0300</pubDate>
   <dc:creator>Сергей</dc:creator>
   <category>гайд</category>
@@ -61,11 +61,11 @@
 <h2 id="chem-otlichayutsya-pyat-tipov-proksi">Чем отличаются пять типов прокси</h2>
 <p>Типы различаются тем, кому принадлежат адреса и как их видит целевой сайт. У каждого типа на ПроксиИндексе есть свой рейтинг, и в него попадают только сервисы, у которых этот тип подтверждён на их собственном сайте.</p>
 <ul>
-<li>Серверные IPv4: адреса дата-центров и хостинг-провайдеров. Сервисы с этим типом собраны в <a href="https://proxyindex.ru/reiting/servernye-proksi-ipv4/">рейтинге серверных прокси IPv4</a>.</li>
-<li>Резидентские: адреса домашних подключений у интернет-провайдеров, сайт видит такой запрос как запрос из домашней сети. Сравнение есть в <a href="https://proxyindex.ru/reiting/rezidentskie-proksi/">рейтинге резидентских прокси</a>.</li>
-<li>Мобильные: адреса сотовых операторов, их рассматривают, когда нужна мобильная выдача или мобильная реклама. Список сервисов приведён в <a href="https://proxyindex.ru/reiting/mobilnye-proksi/">рейтинге мобильных прокси</a>.</li>
-<li>ISP (статические резидентские): постоянные адреса, зарегистрированные на интернет-провайдера и размещённые в дата-центре. Их сравнивает <a href="https://proxyindex.ru/reiting/isp-proksi/">рейтинг ISP-прокси</a>.</li>
-<li>IPv6: адреса шестой версии протокола, они работают только с сайтами, у которых есть IPv6-адрес. Сервисы перечислены в <a href="https://proxyindex.ru/reiting/ipv6-proksi/">рейтинге IPv6-прокси</a>.</li>
+<li>Серверные IPv4: адреса дата-центров и хостинг-провайдеров. Сервисы с этим типом собраны в <a href="https://proxyindex.pro/reiting/servernye-proksi-ipv4/">рейтинге серверных прокси IPv4</a>.</li>
+<li>Резидентские: адреса домашних подключений у интернет-провайдеров, сайт видит такой запрос как запрос из домашней сети. Сравнение есть в <a href="https://proxyindex.pro/reiting/rezidentskie-proksi/">рейтинге резидентских прокси</a>.</li>
+<li>Мобильные: адреса сотовых операторов, их рассматривают, когда нужна мобильная выдача или мобильная реклама. Список сервисов приведён в <a href="https://proxyindex.pro/reiting/mobilnye-proksi/">рейтинге мобильных прокси</a>.</li>
+<li>ISP (статические резидентские): постоянные адреса, зарегистрированные на интернет-провайдера и размещённые в дата-центре. Их сравнивает <a href="https://proxyindex.pro/reiting/isp-proksi/">рейтинг ISP-прокси</a>.</li>
+<li>IPv6: адреса шестой версии протокола, они работают только с сайтами, у которых есть IPv6-адрес. Сервисы перечислены в <a href="https://proxyindex.pro/reiting/ipv6-proksi/">рейтинге IPv6-прокси</a>.</li>
 </ul>
 <p>Есть ли у сайта IPv6-адрес, видно по DNS. В <a href="https://www.rfc-editor.org/rfc/rfc3596.html" rel="nofollow noopener" target="_blank">RFC 3596</a> запись AAAA определена как запись, которая хранит один IPv6-адрес. Если записи AAAA у сайта нет, опубликованного IPv6-адреса у него тоже нет, и IPv6-прокси для него не подойдут.</p>
 <p>Внутри типа различаются режимы работы. При ротации адрес меняется по таймеру или на каждый запрос, а sticky-сессия (один IP на время сессии) держит адрес, пока идёт работа.</p>
@@ -239,70 +239,70 @@
 <tbody>
 <tr>
 <td>1</td>
-<td><a href="https://proxyindex.ru/servis/proxy-market/">Proxy.Market</a></td>
+<td><a href="https://proxyindex.pro/servis/proxy-market/">Proxy.Market</a></td>
 <td>есть</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>2</td>
-<td><a href="https://proxyindex.ru/servis/mobileproxy-space/">MobileProxy.Space</a></td>
+<td><a href="https://proxyindex.pro/servis/mobileproxy-space/">MobileProxy.Space</a></td>
 <td>есть</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>3</td>
-<td><a href="https://proxyindex.ru/servis/proxeon-net/">Proxeon</a></td>
+<td><a href="https://proxyindex.pro/servis/proxeon-net/">Proxeon</a></td>
 <td>есть</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>4</td>
-<td><a href="https://proxyindex.ru/servis/proxymania-su/">ProxyMania</a></td>
+<td><a href="https://proxyindex.pro/servis/proxymania-su/">ProxyMania</a></td>
 <td>не нашли</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>5</td>
-<td><a href="https://proxyindex.ru/servis/papaproxy-net/">PapaProxy</a></td>
+<td><a href="https://proxyindex.pro/servis/papaproxy-net/">PapaProxy</a></td>
 <td>есть</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>6</td>
-<td><a href="https://proxyindex.ru/servis/proxy-seller-com/">Proxy-Seller</a></td>
+<td><a href="https://proxyindex.pro/servis/proxy-seller-com/">Proxy-Seller</a></td>
 <td>не нашли</td>
 <td>не нашли</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>7</td>
-<td><a href="https://proxyindex.ru/servis/proxy-store-com/">Proxy-Store</a></td>
+<td><a href="https://proxyindex.pro/servis/proxy-store-com/">Proxy-Store</a></td>
 <td>не нашли</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>8</td>
-<td><a href="https://proxyindex.ru/servis/geonix-com/">Geonix</a></td>
+<td><a href="https://proxyindex.pro/servis/geonix-com/">Geonix</a></td>
 <td>не нашли</td>
 <td>нет</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>9</td>
-<td><a href="https://proxyindex.ru/servis/arendaproxy-ru/">Arendaproxy</a></td>
+<td><a href="https://proxyindex.pro/servis/arendaproxy-ru/">Arendaproxy</a></td>
 <td>есть</td>
 <td>есть</td>
 <td>есть</td>
 </tr>
 <tr>
 <td>10</td>
-<td><a href="https://proxyindex.ru/servis/fineproxy-org/">FineProxy</a></td>
+<td><a href="https://proxyindex.pro/servis/fineproxy-org/">FineProxy</a></td>
 <td>есть</td>
 <td>есть</td>
 <td>не нашли</td>
@@ -311,7 +311,7 @@
 </table>
 </div>
 <p>«Нет» в таблице означает, что сервис прямо пишет об отсутствии условия. «Не нашли» значит, что подтверждения на сайте сервиса не нашли.</p>
-<p>Полный список из 14 сервисов со счётом приведён в <a href="https://proxyindex.ru/reiting/proksi-dlya-yurlic/">рейтинге прокси для юрлиц</a>, а все 30 сервисов с фильтрами по условиям собраны в <a href="https://proxyindex.ru/">общем рейтинге</a>. Наличие условия не говорит о скорости и доле успешных запросов: рейтинг их пока не измеряет, и это описано в <a href="https://proxyindex.ru/metodika/">методике</a>.</p>
+<p>Полный список из 14 сервисов со счётом приведён в <a href="https://proxyindex.pro/reiting/proksi-dlya-yurlic/">рейтинге прокси для юрлиц</a>, а все 30 сервисов с фильтрами по условиям собраны в <a href="https://proxyindex.pro/">общем рейтинге</a>. Наличие условия не говорит о скорости и доле успешных запросов: рейтинг их пока не измеряет, и это описано в <a href="https://proxyindex.pro/metodika/">методике</a>.</p>
 <h2 id="chastye-oshibki-pri-sravnenii-servisov">Частые ошибки при сравнении сервисов</h2>
 <p>Эти ошибки искажают сравнение даже при верно выбранном типе прокси. Каждую легко заметить до оплаты.</p>
 <ul>
