@@ -9,7 +9,7 @@ services:
     name: proxyindex
     runtime: static
     buildCommand: echo "prebuilt on Mac"
-    staticPublishPath: ./public
+    staticPublishPath: ./docs
     autoDeploy: true
     pullRequestPreviewsEnabled: false
     domains:
