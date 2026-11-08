@@ -528,6 +528,26 @@ img.logo-mark::after { content: none; }
 .tagline { display: block; font-family: var(--font); font-size: 10.5px; letter-spacing: .26em; text-transform: uppercase; font-weight: 600; color: var(--gold); margin-top: 5px; }
 @media (max-width: 760px) { img.logo-mark { width: 32px; height: 32px; } .logo .wm { font-size: 21px; } }
 
+
+/* таблица на средних экранах: колонки убираются по шагам, чтобы ничего не уезжало вправо */
+@media (max-width: 1080px) {
+  .rating .ck-api, .rating .ck-support { display: none; }
+  .rating td.types { white-space: normal; min-width: 120px; }
+  .rating th.sc, .rating td.sc { width: 150px; }
+  .rating td.sc .segbar { width: 120px; }
+}
+@media (max-width: 900px) {
+  .rating th.types, .rating td.types { display: none; }
+}
+.rating .name a, .rating .name small { overflow-wrap: anywhere; }
+
+
+/* «Для юрлиц» на узких экранах: остаются счёт и ЭДО, остальное — в карточке сервиса */
+@media (max-width: 640px) {
+  .docs .k-manager, .docs .k-custom, .docs .k-sla { display: none; }
+  .docs th, .docs td { padding-left: 6px; padding-right: 6px; }
+}
+
 /* ── адаптив ─────────────────────────────────────────────────────── */
 @media (max-width: 980px) {
   .hero-home .hero-txt::before { display: none; }
