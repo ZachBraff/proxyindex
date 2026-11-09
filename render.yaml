@@ -16,6 +16,10 @@ services:
       - proxyindex.ru
       - www.proxyindex.ru
     headers:
+      # временное зеркало: не индексировать (основной сайт — GitHub Pages на proxyindex.pro)
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
