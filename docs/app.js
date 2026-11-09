@@ -36,7 +36,7 @@
     el.querySelectorAll && el.querySelectorAll("[data-count]").forEach(countUp);
   }
 
-  var watched = document.querySelectorAll(REVEAL + ", .segbar, .bar, .ring, [data-count]");
+  var watched = document.querySelectorAll(REVEAL + ", .segbar, .sbar, .bar, .ring, [data-count]");
   if (!hasIO || reduce) {
     watched.forEach(function (el) { el.classList.add("in"); });
   } else {
