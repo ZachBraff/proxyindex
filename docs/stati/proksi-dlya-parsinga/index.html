@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прокси для парсинга: какой тип выбрать под задачу</title>
+<meta name="description" content="Какие прокси нужны для парсинга: серверные, ротационные или резидентские, ротация и sticky, оплата за трафик, scraping API и данные о 30 сервисах.">
+<link rel="canonical" href="https://proxyindex.pro/stati/proksi-dlya-parsinga/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Прокси для парсинга: какой тип выбрать под задачу">
+<meta property="og:description" content="Какие прокси нужны для парсинга: серверные, ротационные или резидентские, ротация и sticky, оплата за трафик, scraping API и данные о 30 сервисах.">
+<meta property="og:url" content="https://proxyindex.pro/stati/proksi-dlya-parsinga/">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-16">
+<meta property="article:modified_time" content="2026-11-16">
+<meta name="theme-color" content="#06130f">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://proxyindex.pro/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&text=%D0%9F%D1%80%D0%BE%D0%BA%D1%81%D0%B8%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=08bf7ce54f">
+<link rel="alternate" type="application/rss+xml" title="ПроксиИндекс — статьи" href="/stati/rss.xml">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__motion)document.documentElement.classList.add("no-motion")},3000)</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Прокси для парсинга сайтов: какой тип выбрать под источник и объём", "description": "Какие прокси нужны для парсинга: серверные, ротационные или резидентские, ротация и sticky, оплата за трафик, scraping API и данные о 30 сервисах.", "datePublished": "2026-11-16", "dateModified": "2026-11-16", "inLanguage": "ru", "url": "https://proxyindex.pro/stati/proksi-dlya-parsinga/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://proxyindex.pro/stati/proksi-dlya-parsinga/"}, "author": {"@type": "Person", "name": "Сергей", "url": "https://proxyindex.pro/o-proekte/"}, "publisher": {"@type": "Organization", "name": "ПроксиИндекс", "url": "https://proxyindex.pro/"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Какие прокси нужны для парсинга?", "acceptedAnswer": {"@type": "Answer", "text": "Для открытых каталогов и справочников с умеренным потоком запросов сравнение начинают с серверных IPv4. При большом объёме с одного сайта смотрят ротационные серверные, а резидентские берут, если ответ зависит от города или сайт показывает адресам дата-центров другую версию страниц. Окончательный выбор подтверждает тест на самом источнике."}}, {"@type": "Question", "name": "Нужны ли ротационные прокси для парсинга сайтов?", "acceptedAnswer": {"@type": "Answer", "text": "Они нужны, когда запросов много и их удобнее раздавать по пулу адресов, а каждый запрос независим, как карточки товаров или страницы справочника. Для цепочек с cookie, фильтрами и выбором города нужна sticky-сессия. Ротация не отменяет лимиты сайта: темп запросов всё равно задаёт ваш парсер."}}, {"@type": "Question", "name": "Что выгоднее для сбора данных: оплата за IP или за трафик?", "acceptedAnswer": {"@type": "Answer", "text": "Это зависит от веса страницы при вашем способе сбора. Если данные есть в HTML, трафика уходит немного, и оплата за гигабайты обычно подходит. Если страницы открываются в браузере со всеми файлами, по медианам Web Almanac 2024 объём растёт больше чем в 147 раз, поэтому сначала измерьте трафик на одну страницу на тесте, а потом сравнивайте тарифы."}}, {"@type": "Question", "name": "Чем scraping API отличается от прокси для парсера?", "acceptedAnswer": {"@type": "Answer", "text": "Прокси дают только адреса, а парсер, браузер и обработку ответов вы держите сами. Scraping API берёт загрузку страниц на себя: вы передаёте URL и получаете готовый ответ. По данным ПроксиИндекса на 28 октября 2026, такой продукт на своём сайте подтвердили 5 сервисов из 30."}}, {"@type": "Question", "name": "Что делать, если сайт отвечает кодом 429?", "acceptedAnswer": {"@type": "Answer", "text": "Код 429 означает, что клиент отправил слишком много запросов за отрезок времени. Прочитайте заголовок Retry-After, если сервер его прислал: там указана пауза в секундах или дата. Снизьте темп запросов к этому источнику и задайте в коде таймауты и повторы с паузами."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Рейтинг", "item": "https://proxyindex.pro/"}, {"@type": "ListItem", "position": 2, "name": "Статьи", "item": "https://proxyindex.pro/stati/"}, {"@type": "ListItem", "position": 3, "name": "Прокси для парсинга: какой тип выбрать под задачу", "item": "https://proxyindex.pro/stati/proksi-dlya-parsinga/"}]}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="/" aria-label="ПроксиИндекс — на главную"><img class="logo-mark" src="/logo-mark.svg" width="36" height="36" alt=""><span class="wm">ПроксиИндекс</span></a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Разделы">
+      <a href="/">Рейтинг</a>
+      <details class="dd"><summary>По типам</summary><div class="dd-in"><a href="/reiting/rezidentskie-proksi/">Резидентские</a><a href="/reiting/mobilnye-proksi/">Мобильные</a><a href="/reiting/servernye-proksi-ipv4/">Серверные IPv4</a><a href="/reiting/ipv6-proksi/">IPv6</a><a href="/reiting/isp-proksi/">ISP</a><a href="/reiting/proksi-dlya-yurlic/">Для юрлиц</a></div></details>
+      <a href="/metodika/">Методика</a>
+      <a href="/stati/">Статьи</a>
+      <a href="/o-proekte/">Об авторе</a>
+      <a class="nav-cta" href="/otchet/">Отчёт PDF</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<nav class="crumbs" aria-label="Навигация"><a href="/">Рейтинг</a> / <a href="/stati/">Статьи</a> / <span>Прокси для парсинга: какой тип выбрать под задачу</span></nav>
+
+<div class="art-layout">
+<article class="art">
+<header class="hero sm art-head">
+  <p class="kicker">Статьи · гайд</p>
+  <h1>Прокси для парсинга сайтов: какой тип выбрать под источник и объём</h1>
+  <p class="byline">Автор — <a href="/o-proekte/">Сергей</a> · опубликовано <time datetime="2026-11-16">16 ноября 2026</time></p>
+</header>
+<aside class="tldr" aria-labelledby="korotko"><h2 id="korotko">Коротко</h2><ul><li>Прокси для парсинга выбирают по сайту-источнику и объёму: сравнение обычно начинают с серверных IPv4.</li><li>Ротационные серверные распределяют большой поток запросов, резидентские нужны для города или версии страниц, которую видят домашние посетители.</li><li>Ротация подходит для независимых запросов, sticky-сессия нужна, когда cookie и адрес не должны меняться.</li><li>При оплате за трафик решает способ сбора: по медианам Web Almanac 2024 полная страница тяжелее HTML больше чем в 147 раз.</li><li>Ответ 429 и заголовок Retry-After означают, что темп нужно снизить, а не сменить адрес.</li><li>На 28 октября 2026 серверные IPv4 подтвердили 28 из 30 сервисов, scraping API подтвердили 5 из 30.</li></ul></aside>
+<nav class="toc" aria-label="Содержание"><p class="toc-h">Содержание</p><ol><li><a href="#kakie-proksi-nuzhny-dlya-parsinga-pod-vashu-zadachu">Какие прокси нужны для парсинга под вашу задачу</a></li><li><a href="#snachala-proverte-ofitsialnyy-api-i-robots-txt">Сначала проверьте официальный API и robots.txt</a></li><li><a href="#servernye-rotatsionnye-ili-rezidentskie-adresa">Серверные, ротационные или резидентские адреса</a></li><li><a href="#rotatsiya-ili-sticky-sessii">Ротация или sticky-сессии</a></li><li><a href="#oplata-za-ip-ili-za-trafik">Оплата за IP или за трафик</a></li><li><a href="#kogda-prosche-scraping-api">Когда проще scraping API</a></li><li><a href="#kak-derzhat-temp-zaprosov-k-istochniku">Как держать темп запросов к источнику</a></li><li><a href="#chto-pokazyvayut-dannye-reytinga-po-usloviyam-dlya-parsinga">Что показывают данные рейтинга по условиям для парсинга</a></li><li><a href="#kak-proverit-vybrannyy-tip-na-svoem-istochnike">Как проверить выбранный тип на своём источнике</a></li></ol></nav>
+<div class="art-body">
+<p>Прокси для парсинга выбирают по сайту-источнику и объёму: для обычных сайтов сравнение начинают с серверных IPv4, для большого потока запросов смотрят ротационные серверные, а резидентские берут, когда нужен город или версия страниц, которую видят посетители с домашним интернетом. Если у площадки есть официальный API, сначала проверьте его.</p>
+<h2 id="kakie-proksi-nuzhny-dlya-parsinga-pod-vashu-zadachu">Какие прокси нужны для парсинга под вашу задачу</h2>
+<p>Тип прокси для сбора данных определяют три вещи: какой сайт вы собираете, сколько страниц в сутки и важна ли география ответа. Тариф и название пакета вторичны.</p>
+<p>В таблице собраны типовые ситуации сбора открытых данных и тип, с которого разумно начать тест. Это стартовая точка: окончательный выбор подтверждает проверка на самом источнике.</p>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th>Ситуация</th>
+<th>Что важно</th>
+<th>С чего начать сравнение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Каталоги и справочники без жёстких лимитов</td>
+<td>объём, стабильность</td>
+<td>серверные IPv4</td>
+</tr>
+<tr>
+<td>Десятки тысяч страниц в сутки с одного сайта</td>
+<td>распределение потока</td>
+<td>ротационные серверные</td>
+</tr>
+<tr>
+<td>Цены и наличие зависят от города</td>
+<td>адрес в нужном регионе</td>
+<td>резидентские с выбором города</td>
+</tr>
+<tr>
+<td>Дата-центрам сайт показывает другую версию страниц</td>
+<td>данные как у обычного посетителя</td>
+<td>резидентские</td>
+</tr>
+<tr>
+<td>Цепочки страниц с фильтрами и пагинацией</td>
+<td>один адрес на сессию</td>
+<td>sticky-сессии</td>
+</tr>
+<tr>
+<td>Источник с официальным API</td>
+<td>условия API</td>
+<td>API площадки, прокси не нужны</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Серверные IPv4 на 28 октября 2026 подтвердили 28 из 30 сервисов, их сравнение собрано в <a href="/reiting/servernye-proksi-ipv4/">рейтинге серверных прокси IPv4</a>. Для задач с географией и типом сети откройте <a href="/reiting/rezidentskie-proksi/">рейтинг резидентских прокси</a>: там только сервисы, у которых этот тип написан на их собственном сайте.</p>
+<h2 id="snachala-proverte-ofitsialnyy-api-i-robots-txt">Сначала проверьте официальный API и robots.txt</h2>
+<p>Если у источника есть официальный API, прокси для этих данных обычно не нужны: вы получаете структурированный ответ по правилам площадки. Парсинг страниц начинают, когда API нет или в нём нет нужных полей.</p>
+<p>Пример такого канала описан в документации <a href="https://aistudio.yandex.ru/docs/ru/search-api/concepts/" rel="nofollow noopener" target="_blank">Yandex Search API</a>: сервис позволяет автоматически отправлять запросы к поисковой базе Яндекса и возвращает результаты в XML, HTML или JSON в зависимости от типа поиска. Если у вашего источника есть такой интерфейс, его условия читают до начала сбора.</p>
+<p>Для страниц сайта правила для роботов задаёт файл robots.txt. Его формат описан в <a href="https://www.rfc-editor.org/rfc/rfc9309.html" rel="nofollow noopener" target="_blank">RFC 9309</a>, и из стандарта для парсера следуют четыре вещи:</p>
+<ul>
+<li>файл лежит по адресу <code>/robots.txt</code> в корне сайта;</li>
+<li>если файл отдаёт ошибку 4xx, робот вправе обращаться к любым ресурсам сервера;</li>
+<li>если сервер отвечает ошибкой 5xx, робот должен считать весь сайт закрытым;</li>
+<li>кэшированную копию файла не стоит использовать дольше 24 часов.</li>
+</ul>
+<p>RFC 9309 отдельно оговаривает, что эти правила не являются формой авторизации доступа. Поэтому кроме robots.txt прочитайте пользовательское соглашение площадки, а вопросы о допустимости сбора конкретных данных обсудите с юристом компании.</p>
+<h2 id="servernye-rotatsionnye-ili-rezidentskie-adresa">Серверные, ротационные или резидентские адреса</h2>
+<p>Серверные IPv4 принадлежат дата-центрам и хостинг-провайдерам, резидентские относятся к домашним подключениям у интернет-провайдеров. Ротационные серверные отличаются режимом: адрес из пула меняется по таймеру или на каждый запрос.</p>
+<p>С серверных IPv4 удобно начинать, когда источник открыт и ровно отвечает на умеренный поток запросов. Адреса закреплены за вами на срок аренды, поэтому их легко добавить в список разрешённых и проще разбирать ошибки: каждый адрес виден в логах.</p>
+<p>Ротационные серверные нужны, когда объём растёт и запросы удобнее раздавать по пулу, а не держать на нескольких закреплённых адресах. Ротация распределяет нагрузку, но не отменяет лимиты сайта: темп запросов к одному источнику всё равно задаёте вы.</p>
+<p>Резидентские адреса рассматривают в двух случаях. Первый: содержимое страницы зависит от региона посетителя, и нужен адрес в конкретном городе. Второй: на тесте видно, что адресам дата-центров сайт показывает другую версию страниц, а вам нужны данные в том виде, в каком их видят покупатели.</p>
+<h2 id="rotatsiya-ili-sticky-sessii">Ротация или sticky-сессии</h2>
+<p>Ротация подходит для независимых запросов, sticky-сессия (один IP на время сессии) нужна, когда несколько запросов подряд должны идти с одного адреса. Ошибка в выборе режима видна сразу: сессия рвётся, выбранный город или фильтры сбрасываются.</p>
+<p>Независимые запросы — это карточки товаров, страницы справочника, отдельные URL из карты сайта. Каждый запрос самодостаточен, поэтому смена адреса между ними ничего не ломает.</p>
+<p>Цепочки запросов ведут себя иначе. Пагинация с фильтрами и выбор города на сайте требуют, чтобы cookie и адрес не менялись до конца цепочки.</p>
+<p>Это видно и по инструментам. В <a href="https://requests.readthedocs.io/en/latest/user/advanced/" rel="nofollow noopener" target="_blank">документации requests</a> сказано, что объект Session сохраняет cookie между запросами и переиспользует TCP-соединение с тем же хостом. Прокси можно передать в отдельный запрос аргументом <code>proxies</code> или один раз задать для всей сессии.</p>
+<p>Если страницы собираются через браузер, прокси в <a href="https://playwright.dev/docs/network#http-proxy" rel="nofollow noopener" target="_blank">Playwright</a> задают для всего браузера или для отдельного контекста, с логином и паролем для HTTP(S)-прокси. Отдельный контекст с отдельным прокси удобен, когда несколько потоков сбора работают параллельно и не должны смешивать cookie.</p>
+<h2 id="oplata-za-ip-ili-za-trafik">Оплата за IP или за трафик</h2>
+<p>Модель оплаты зависит от того, сколько байт уходит на одну страницу. За IP платят за число адресов на срок, при оплате по факту трафика (pay-as-you-go) списывается израсходованный объём, и тогда вес страницы прямо влияет на счёт.</p>
+<p>Вес страницы сильно зависит от способа сбора. По данным <a href="https://almanac.httparchive.org/en/2024/page-weight" rel="nofollow noopener" target="_blank">HTTP Archive Web Almanac 2024</a>, медианная внутренняя страница на десктопе загружает 18 КБ HTML. Медианный вес десктопной страницы целиком, со стилями, скриптами и картинками, в замере октября 2024 составил 2 652 КБ.</p>
+<p>HTTP-клиент вроде requests скачивает только HTML, если вы не запрашиваете остальные файлы. Браузер загружает страницу целиком. Разница по медианам: 2 652 КБ против 18 КБ, больше чем в 147 раз.</p>
+<h3 id="uslovnyy-primer-rascheta-trafika">Условный пример расчёта трафика</h3>
+<p>Условный пример: компании нужно раз в сутки собирать 10 000 страниц каталога с одного сайта. Цифры веса взяты из медиан Web Almanac, у вашего источника они будут другими.</p>
+<ul>
+<li>Только HTML: 10 000 × 18 КБ = 180 000 КБ, это 180 МБ в сутки и 5,4 ГБ за 30 дней.</li>
+<li>Браузер со всеми файлами: 10 000 × 2 652 КБ = 26 520 000 КБ, это 26,52 ГБ в сутки и 795,6 ГБ за 30 дней.</li>
+<li>Оценка для браузера верхняя: часть файлов он берёт из кэша, а картинки можно не загружать.</li>
+</ul>
+<p>Отсюда практическое правило. Если данные есть в HTML, оплата по трафику обычно не страшна. Если без браузера не обойтись, сначала измерьте трафик на одну страницу на тесте и только потом сравнивайте тарифы за гигабайт с тарифами за IP.</p>
+<h2 id="kogda-prosche-scraping-api">Когда проще scraping API</h2>
+<p>Scraping API (API для сбора данных) нужен, когда вы не хотите сами держать парсер, браузеры и пул адресов: вы отправляете URL и получаете готовый ответ. Это другой продукт, чем прокси, и сравнивать его надо по стоимости одной успешной страницы.</p>
+<p>В рейтинге scraping API — отдельное условие среди типов прокси. Сервисы, которые подтвердили его на своём сайте, перечислены в разделе с данными рейтинга ниже.</p>
+<p>Scraping API разумно рассмотреть в трёх случаях:</p>
+<ul>
+<li>источников много, и поддерживать отдельный парсер под каждый дорого;</li>
+<li>страницы собираются только с выполнением JavaScript;</li>
+<li>в команде нет разработчика, который будет следить за сбором.</li>
+</ul>
+<p>Если источник один, данные лежат в HTML и разработчик есть, своих прокси и HTTP-клиента обычно хватает. Тогда в работе остаются API управления прокси (выдача и смена адресов из кода) и подаккаунты для сотрудников.</p>
+<h2 id="kak-derzhat-temp-zaprosov-k-istochniku">Как держать темп запросов к источнику</h2>
+<p>Темп задаёт парсер, а не прокси: даже с большим пулом адресов источник вправе ограничить частоту запросов. Сигналы сайта нужно читать и замедляться, а не менять адрес.</p>
+<p>Главный такой сигнал описан в <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429" rel="nofollow noopener" target="_blank">справке MDN о коде 429</a>: ответ значит, что клиент отправил слишком много запросов за отрезок времени. Механизм просьбы снизить частоту называют rate limiting.</p>
+<p>К ответу 429 сервер может добавить заголовок <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After" rel="nofollow noopener" target="_blank">Retry-After</a>. В нём указано, сколько ждать до следующего запроса: числом секунд или датой. Парсер должен прочитать заголовок и выдержать паузу.</p>
+<p>Две настройки requests стоит задать явно, потому что по умолчанию их нет. Документация requests предупреждает, что запросы без таймаута не прерываются и код может зависнуть на минуты. Повторов при сбое соединения библиотека тоже не делает, их подключают через класс Retry из urllib3 с паузами между попытками.</p>
+<h2 id="chto-pokazyvayut-dannye-reytinga-po-usloviyam-dlya-parsinga">Что показывают данные рейтинга по условиям для парсинга</h2>
+<p>На 28 октября 2026 серверные IPv4 подтвердили 28 из 30 сервисов рейтинга, а scraping API только 5 из 30. Оплату по факту трафика подтвердили 12 из 30, это 40%.</p>
+<p>В рейтинге я засчитываю условие, только если оно написано на сайте самого сервиса. «Не нашли» значит, что на сайте сервиса не нашли ни подтверждения, ни отказа. Это не то же самое, что «нет».</p>
+<p>В таблице указано, сколько сервисов из 30 подтвердили каждое условие из этой статьи, по данным рейтинга на 28 октября 2026.</p>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th>Условие</th>
+<th>Подтвердили</th>
+<th>Прямо пишут «нет»</th>
+<th>Не нашли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Серверные IPv4</td>
+<td>28</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Ротационные серверные</td>
+<td>16</td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Резидентские</td>
+<td>23</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Sticky-сессии</td>
+<td>25</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>API управления прокси</td>
+<td>27</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Оплата по факту трафика (pay-as-you-go)</td>
+<td>12</td>
+<td>13</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Scraping API</td>
+<td>5</td>
+<td>25</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Ротационные серверные подтвердили 16 из 30, чуть больше половины. В первой десятке по индексу условий режим ротации и модель оплаты различаются сильнее всего:</p>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th>Место</th>
+<th>Сервис</th>
+<th>Ротационные серверные</th>
+<th>Резидентские</th>
+<th>Pay-as-you-go</th>
+<th>Scraping API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="/servis/proxy-market/">Proxy.Market</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="/servis/mobileproxy-space/">MobileProxy.Space</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="/servis/proxeon-net/">Proxeon</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="/servis/proxymania-su/">ProxyMania</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="/servis/papaproxy-net/">PapaProxy</a></td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="/servis/proxy-seller-com/">Proxy-Seller</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="/servis/proxy-store-com/">Proxy-Store</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="/servis/geonix-com/">Geonix</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>есть</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="/servis/arendaproxy-ru/">Arendaproxy</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="/servis/fineproxy-org/">FineProxy</a></td>
+<td>есть</td>
+<td>нет</td>
+<td>нет</td>
+<td>есть</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>«Нет» в таблице означает, что сервис прямо пишет об отсутствии условия на своём сайте.</p>
+<p>Scraping API подтвердили пять сервисов, в порядке места в рейтинге:</p>
+<ul>
+<li>10-е место: <a href="/servis/fineproxy-org/">FineProxy</a>;</li>
+<li>15-е место: <a href="/servis/rucaptcha-com/">RuCaptcha Proxy</a>;</li>
+<li>16-е место: <a href="/servis/froxy-com/">Froxy</a>;</li>
+<li>17-е место: <a href="/servis/floppydata-com/">FloppyData</a>;</li>
+<li>21-е место: <a href="/servis/mangoproxy-com/">MangoProxy</a>.</li>
+</ul>
+<p>Все 30 сервисов с фильтрами по условиям собраны в <a href="/">общем рейтинге</a>. Наличие условия ничего не говорит о скорости и доле успешных запросов: рейтинг их пока не измеряет, как описано в <a href="/metodika/">методике</a>.</p>
+<h2 id="kak-proverit-vybrannyy-tip-na-svoem-istochnike">Как проверить выбранный тип на своём источнике</h2>
+<p>Тест на реальном источнике отвечает на вопрос, который не закрывает ни сайт сервиса, ни рейтинг: подходит ли тип адресов именно вашему сайту. Проводите его с тем же темпом, городами и способом сбора, что и в работе.</p>
+<p>За тест запишите четыре числа:</p>
+<ul>
+<li>долю ответов 200 от всех запросов;</li>
+<li>сколько раз пришёл ответ 429 и что было в Retry-After;</li>
+<li>среднее время ответа;</li>
+<li>трафик на одну страницу, если тариф считается за гигабайты.</li>
+</ul>
+<p>Если серверные адреса дают стабильные ответы, переходить на другой тип незачем. Если нет, повторите тест на резидентских с тем же объёмом и сравните те же четыре числа. Как устроить пробную закупку и что проверить в условиях сервиса до оплаты, разобрано в статье <a href="/stati/kak-vybrat-proksi-dlya-kompanii/">о выборе прокси для компании</a>.</p>
+</div>
+<section class="faq"><h2>Вопросы и ответы</h2><details class='qa'><summary>Какие прокси нужны для парсинга?</summary><div>Для открытых каталогов и справочников с умеренным потоком запросов сравнение начинают с серверных IPv4. При большом объёме с одного сайта смотрят ротационные серверные, а резидентские берут, если ответ зависит от города или сайт показывает адресам дата-центров другую версию страниц. Окончательный выбор подтверждает тест на самом источнике.</div></details><details class='qa'><summary>Нужны ли ротационные прокси для парсинга сайтов?</summary><div>Они нужны, когда запросов много и их удобнее раздавать по пулу адресов, а каждый запрос независим, как карточки товаров или страницы справочника. Для цепочек с cookie, фильтрами и выбором города нужна sticky-сессия. Ротация не отменяет лимиты сайта: темп запросов всё равно задаёт ваш парсер.</div></details><details class='qa'><summary>Что выгоднее для сбора данных: оплата за IP или за трафик?</summary><div>Это зависит от веса страницы при вашем способе сбора. Если данные есть в HTML, трафика уходит немного, и оплата за гигабайты обычно подходит. Если страницы открываются в браузере со всеми файлами, по медианам Web Almanac 2024 объём растёт больше чем в 147 раз, поэтому сначала измерьте трафик на одну страницу на тесте, а потом сравнивайте тарифы.</div></details><details class='qa'><summary>Чем scraping API отличается от прокси для парсера?</summary><div>Прокси дают только адреса, а парсер, браузер и обработку ответов вы держите сами. Scraping API берёт загрузку страниц на себя: вы передаёте URL и получаете готовый ответ. По данным ПроксиИндекса на 28 октября 2026, такой продукт на своём сайте подтвердили 5 сервисов из 30.</div></details><details class='qa'><summary>Что делать, если сайт отвечает кодом 429?</summary><div>Код 429 означает, что клиент отправил слишком много запросов за отрезок времени. Прочитайте заголовок Retry-After, если сервер его прислал: там указана пауза в секундах или дата. Снизьте темп запросов к этому источнику и задайте в коде таймауты и повторы с паузами.</div></details></section>
+<section class="art-src"><h2>Источники</h2><ol><li><a href="https://www.rfc-editor.org/rfc/rfc9309.html" rel="nofollow noopener" target="_blank">RFC Editor: RFC 9309 Robots Exclusion Protocol</a> <span>— rfc-editor.org · дата обращения: 16 ноября 2026</span></li><li><a href="https://aistudio.yandex.ru/docs/ru/search-api/concepts/" rel="nofollow noopener" target="_blank">Яндекс: документация Yandex Search API</a> <span>— aistudio.yandex.ru · дата обращения: 16 ноября 2026</span></li><li><a href="https://requests.readthedocs.io/en/latest/user/advanced/" rel="nofollow noopener" target="_blank">Requests: Advanced Usage (Session, Proxies, Timeouts)</a> <span>— requests.readthedocs.io · дата обращения: 16 ноября 2026</span></li><li><a href="https://playwright.dev/docs/network#http-proxy" rel="nofollow noopener" target="_blank">Playwright: Network, HTTP Proxy</a> <span>— playwright.dev · дата обращения: 16 ноября 2026</span></li><li><a href="https://almanac.httparchive.org/en/2024/page-weight" rel="nofollow noopener" target="_blank">HTTP Archive: Web Almanac 2024, Page Weight</a> <span>— almanac.httparchive.org · дата обращения: 16 ноября 2026</span></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429" rel="nofollow noopener" target="_blank">MDN: 429 Too Many Requests</a> <span>— developer.mozilla.org · дата обращения: 16 ноября 2026</span></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After" rel="nofollow noopener" target="_blank">MDN: Retry-After</a> <span>— developer.mozilla.org · дата обращения: 16 ноября 2026</span></li></ol></section>
+<section class="art-rel"><h2>Ещё по теме</h2><div class="art-list"><a class="art-card" href="/stati/kak-vybrat-proksi-dlya-kompanii/"><span class="art-meta">гайд · 31 октября 2026</span><b>Как выбрать прокси для компании: задача, тип, условия</b><span>Порядок выбора прокси для компании: задача, тип адресов, условия сервиса для юрлиц, тест на своей площадке и данные о 30 сервисах.</span></a><a class="art-card" href="/stati/kak-kupit-proksi-na-yurlico/"><span class="art-meta">инструкция · 13 ноября 2026</span><b>Как купить прокси на юрлицо: счёт, договор, документы</b><span>Шесть шагов покупки прокси компанией: оплата по счёту, оферта или договор, акт и УПД, ЭДО. Плюс данные о счёте и документах у 30 сервисов.</span></a></div></section>
+<aside class="art-cta"><b>Сравните сервисы по проверяемым условиям</b><p>В открытом рейтинге — 30 прокси-сервисов для бизнеса и 23 условия: оплата по счёту, ЭДО, гарантии, типы прокси, API. Каждый факт — со ссылкой на сайт сервиса и датой проверки.</p><p><a class="btn" href="/">Открыть рейтинг</a> <a class="btn ghost" href="/metodika/">Как считаем баллы</a></p></aside>
+</article>
+<aside class="art-side"><nav class="toc toc-side" aria-label="Содержание"><p class="toc-h">Содержание</p><ol><li><a href="#kakie-proksi-nuzhny-dlya-parsinga-pod-vashu-zadachu">Какие прокси нужны для парсинга под вашу задачу</a></li><li><a href="#snachala-proverte-ofitsialnyy-api-i-robots-txt">Сначала проверьте официальный API и robots.txt</a></li><li><a href="#servernye-rotatsionnye-ili-rezidentskie-adresa">Серверные, ротационные или резидентские адреса</a></li><li><a href="#rotatsiya-ili-sticky-sessii">Ротация или sticky-сессии</a></li><li><a href="#oplata-za-ip-ili-za-trafik">Оплата за IP или за трафик</a></li><li><a href="#kogda-prosche-scraping-api">Когда проще scraping API</a></li><li><a href="#kak-derzhat-temp-zaprosov-k-istochniku">Как держать темп запросов к источнику</a></li><li><a href="#chto-pokazyvayut-dannye-reytinga-po-usloviyam-dlya-parsinga">Что показывают данные рейтинга по условиям для парсинга</a></li><li><a href="#kak-proverit-vybrannyy-tip-na-svoem-istochnike">Как проверить выбранный тип на своём источнике</a></li></ol></nav><div class="side-box"><p class="toc-h">Первая пятёрка рейтинга</p><ol class="side-top"><li><span class="rk rk1">1</span><a href="/servis/proxy-market/">Proxy.Market</a><b>97</b></li><li><span class="rk rk2">2</span><a href="/servis/mobileproxy-space/">MobileProxy.Space</a><b>83</b></li><li><span class="rk rk3">3</span><a href="/servis/proxeon-net/">Proxeon</a><b>83</b></li><li><span class="rk">4</span><a href="/servis/proxymania-su/">ProxyMania</a><b>83</b></li><li><span class="rk">5</span><a href="/servis/papaproxy-net/">PapaProxy</a><b>78</b></li></ol><a href="/">Все 30 сервисов →</a></div><a class="side-box side-pdf" href="/otchet/"><b>Отчёт в PDF</b><span>Рейтинг, карточки и методика одним файлом</span></a></aside>
+</div>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="logo small"><img class="logo-mark" src="/logo-mark.svg" width="44" height="44" alt=""><span><span class="wm">ПроксиИндекс</span><small class="tagline">Рейтинг прокси для бизнеса</small></span></div>
+      <p>Открытый рейтинг прокси-сервисов для бизнеса в России. Каждый балл — факт с сайта сервиса со ссылкой и датой проверки.</p>
+      <p class="muted">Личный проект, автор — Сергей. <a href="/o-proekte/">Об авторе</a> · обновлено 16 ноября 2026.</p>
+    </div>
+    <div class="foot-links">
+      <a href="/metodika/">Методика</a>
+      <a href="/o-proekte/">Об авторе</a>
+      <a href="/o-proekte/#ispravit">Исправить данные о сервисе</a>
+      <a href="/sitemap.xml">Карта сайта</a>
+    </div>
+  </div>
+</footer>
+<script src="/app.js?v=fd2eb3a0dc" defer></script>
+
+</body>
+</html>
