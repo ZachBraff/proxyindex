@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Что такое ISP прокси и чем они отличаются от резидентских</title>
+<meta name="description" content="Что такое ISP прокси: адрес из сети провайдера на сервере, отличия от резидентских и серверных IPv4, проверка ASN по RIPE и данные о 30 сервисах.">
+<link rel="canonical" href="https://proxyindex.pro/stati/isp-proksi-chto-eto/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Что такое ISP прокси и чем они отличаются от резидентских">
+<meta property="og:description" content="Что такое ISP прокси: адрес из сети провайдера на сервере, отличия от резидентских и серверных IPv4, проверка ASN по RIPE и данные о 30 сервисах.">
+<meta property="og:url" content="https://proxyindex.pro/stati/isp-proksi-chto-eto/">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-18">
+<meta property="article:modified_time" content="2026-11-18">
+<meta name="theme-color" content="#06130f">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://proxyindex.pro/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&text=%D0%9F%D1%80%D0%BE%D0%BA%D1%81%D0%B8%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=08bf7ce54f">
+<link rel="alternate" type="application/rss+xml" title="ПроксиИндекс — статьи" href="/stati/rss.xml">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__motion)document.documentElement.classList.add("no-motion")},3000)</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ISP прокси: что это, как устроен адрес и чем он отличается от резидентского", "description": "Что такое ISP прокси: адрес из сети провайдера на сервере, отличия от резидентских и серверных IPv4, проверка ASN по RIPE и данные о 30 сервисах.", "datePublished": "2026-11-18", "dateModified": "2026-11-18", "inLanguage": "ru", "url": "https://proxyindex.pro/stati/isp-proksi-chto-eto/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://proxyindex.pro/stati/isp-proksi-chto-eto/"}, "author": {"@type": "Person", "name": "Сергей", "url": "https://proxyindex.pro/o-proekte/"}, "publisher": {"@type": "Organization", "name": "ПроксиИндекс", "url": "https://proxyindex.pro/"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое ISP прокси?", "acceptedAnswer": {"@type": "Answer", "text": "Это прокси с IP-адресом, который зарегистрирован в сети интернет-провайдера, но работает на сервере в дата-центре. У PapaProxy, FineProxy и Proxys.io такой адрес статический и закреплён за клиентом на срок аренды. Поэтому сервисы называют их ещё статическими резидентскими."}}, {"@type": "Question", "name": "Чем ISP прокси отличаются от резидентских?", "acceptedAnswer": {"@type": "Answer", "text": "Резидентские прокси с ротацией берут адреса подключений пользователей, адрес меняется по таймеру или на каждый запрос, а у Proxys.io, например, оплата идёт за объём трафика. ISP-адрес работает на сервере, не меняется на срок аренды и в ISP-тарифах Proxys.io и FineProxy оплачивается за количество IP и период."}}, {"@type": "Question", "name": "Что выбрать: ISP или резидентские прокси?", "acceptedAnswer": {"@type": "Answer", "text": "ISP удобнее, когда один и тот же адрес нужен неделями: регулярный съём позиций из одного региона, тест своих сайтов со списком разрешённых адресов, длинные сессии. Резидентские с ротацией удобнее для большого числа независимых запросов, когда нужен пул разных адресов. Окончательный выбор подтверждает тест на вашем источнике."}}, {"@type": "Question", "name": "Как проверить, что прокси действительно ISP?", "acceptedAnswer": {"@type": "Answer", "text": "Узнайте внешний IP при включённом прокси и найдите его в базе данных RIPE. Затем посмотрите в RIPEstat, какая автономная система анонсирует префикс и как называется её держатель. Если держатель сети провайдер связи, а не хостинг, адрес относится к сети провайдера."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Рейтинг", "item": "https://proxyindex.pro/"}, {"@type": "ListItem", "position": 2, "name": "Статьи", "item": "https://proxyindex.pro/stati/"}, {"@type": "ListItem", "position": 3, "name": "Что такое ISP прокси и чем они отличаются от резидентских", "item": "https://proxyindex.pro/stati/isp-proksi-chto-eto/"}]}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="/" aria-label="ПроксиИндекс — на главную"><img class="logo-mark" src="/logo-mark.svg" width="36" height="36" alt=""><span class="wm">ПроксиИндекс</span></a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Разделы">
+      <a href="/">Рейтинг</a>
+      <details class="dd"><summary>По типам</summary><div class="dd-in"><a href="/reiting/rezidentskie-proksi/">Резидентские</a><a href="/reiting/mobilnye-proksi/">Мобильные</a><a href="/reiting/servernye-proksi-ipv4/">Серверные IPv4</a><a href="/reiting/ipv6-proksi/">IPv6</a><a href="/reiting/isp-proksi/">ISP</a><a href="/reiting/proksi-dlya-yurlic/">Для юрлиц</a></div></details>
+      <a href="/metodika/">Методика</a>
+      <a href="/stati/">Статьи</a>
+      <a href="/o-proekte/">Об авторе</a>
+      <a class="nav-cta" href="/otchet/">Отчёт PDF</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<nav class="crumbs" aria-label="Навигация"><a href="/">Рейтинг</a> / <a href="/stati/">Статьи</a> / <span>Что такое ISP прокси и чем они отличаются от резидентских</span></nav>
+
+<div class="art-layout">
+<article class="art">
+<header class="hero sm art-head">
+  <p class="kicker">Статьи · объяснение</p>
+  <h1>ISP прокси: что это, как устроен адрес и чем он отличается от резидентского</h1>
+  <p class="byline">Автор — <a href="/o-proekte/">Сергей</a> · опубликовано <time datetime="2026-11-18">18 ноября 2026</time></p>
+</header>
+<aside class="tldr" aria-labelledby="korotko"><h2 id="korotko">Коротко</h2><ul><li>ISP прокси — это статический адрес из сети интернет-провайдера, который работает на сервере в дата-центре.</li><li>От резидентских с ротацией они отличаются тем, что адрес закреплён за вами на срок аренды.</li><li>От серверных IPv4 они отличаются сетью: автономная система принадлежит провайдеру, а не хостингу.</li><li>Термин у сервисов не единый: встречаются и ISP-тарифы с ротацией и оплатой за трафик.</li><li>Сеть адреса можно проверить самому по базе данных RIPE и RIPEstat.</li><li>На 28 октября 2026 ISP подтвердили 18 из 30 сервисов рейтинга, резидентские подтвердили 23 из 30.</li></ul></aside>
+<nav class="toc" aria-label="Содержание"><p class="toc-h">Содержание</p><ol><li><a href="#chto-takoe-isp-proksi-prostymi-slovami">Что такое ISP прокси простыми словами</a></li><li><a href="#kak-ustroen-adres-i-pri-chem-zdes-asn">Как устроен адрес и при чём здесь ASN</a></li><li><a href="#chem-isp-otlichayutsya-ot-rezidentskih-i-servernyh-proksi">Чем ISP отличаются от резидентских и серверных прокси</a></li><li><a href="#servisy-ponimayut-termin-isp-po-raznomu">Сервисы понимают термин ISP по-разному</a></li><li><a href="#kogda-isp-proksi-podhodyat-pod-zadachu-a-kogda-net">Когда ISP прокси подходят под задачу, а когда нет</a></li><li><a href="#chto-pokazyvayut-dannye-reytinga-po-isp-i-rezidentskim">Что показывают данные рейтинга по ISP и резидентским</a></li><li><a href="#kak-proverit-isp-adres-samomu">Как проверить ISP-адрес самому</a></li></ol></nav>
+<div class="art-body">
+<p>ISP прокси это статические адреса, которые зарегистрированы за сетью интернет-провайдера, но работают на сервере в дата-центре. От резидентских с ротацией они отличаются тем, что адрес закреплён за вами на срок аренды и не меняется, а от серверных IPv4 тем, что сеть адреса принадлежит провайдеру, а не хостингу.</p>
+<h2 id="chto-takoe-isp-proksi-prostymi-slovami">Что такое ISP прокси простыми словами</h2>
+<p>ISP (Internet Service Provider, интернет-провайдер) прокси совмещают два свойства: сеть адреса как у домашнего подключения и стабильность сервера. Поэтому на сайтах их ещё называют статическими резидентскими.</p>
+<p>Обычный домашний адрес выдаёт провайдер абоненту. Серверный адрес принадлежит хостингу и стоит на оборудовании в дата-центре. ISP-адрес берёт по одной черте от каждого: регистрация из сети провайдера, а размещение на сервере.</p>
+<p>На странице <a href="https://papaproxy.net/ru/isp-proxy.php" rel="nofollow noopener" target="_blank">ISP-прокси PapaProxy</a> это описано так: «Статические резидентные адреса, выданные реальными интернет-провайдерами и размещённые на нашем серверном железе». В FAQ той же страницы уточнено, что IP «зарегистрирован на автономную систему (ASN) реального интернет-провайдера».</p>
+<p>Сервисы, которые подтвердили этот тип на своём сайте, собраны в <a href="/reiting/isp-proksi/">рейтинге ISP-прокси</a>. Там же видны остальные условия каждого сервиса: документы, API, sticky-сессии.</p>
+<h2 id="kak-ustroen-adres-i-pri-chem-zdes-asn">Как устроен адрес и при чём здесь ASN</h2>
+<p>Принадлежность адреса определяет автономная система, в которую он входит. По определению <a href="https://www.rfc-editor.org/rfc/rfc1930.html" rel="nofollow noopener" target="_blank">RFC 1930</a>, автономная система (AS) это связанная группа IP-префиксов, которой управляют один или несколько операторов сети с единой и чётко определённой политикой маршрутизации.</p>
+<p>У каждой AS есть глобально уникальный номер, ASN. Как сказано в том же RFC, номер нужен для обмена внешней маршрутной информацией с соседними системами. Без исключений у AS должна быть только одна политика маршрутизации.</p>
+<p>Номера и адреса раздают региональные интернет-регистратуры. На странице <a href="https://www.ripe.net/about-us/what-we-do/" rel="nofollow noopener" target="_blank">«Что мы делаем» RIPE NCC</a> указано, что организация работает как Regional Internet Registry и выдаёт ресурсы IPv4, IPv6 и AS-номера участникам в Европе, на Ближнем Востоке и в части Центральной Азии.</p>
+<p>На странице <a href="https://www.ripe.net/manage-ips-and-asns/as-numbers/" rel="nofollow noopener" target="_blank">RIPE NCC об AS-номерах</a> сказано, что получить ASN может любая организация. По текущей политике сеть должна быть подключена к нескольким соседним сетям и иметь собственную политику маршрутизации.</p>
+<p>Отсюда практический смысл. Номер сети, из которой анонсирован адрес, есть в открытых данных регистратуры, как его найти, описано в последнем разделе. Для ISP прокси это сеть провайдера, для серверных IPv4 сеть хостинга или дата-центра.</p>
+<h2 id="chem-isp-otlichayutsya-ot-rezidentskih-i-servernyh-proksi">Чем ISP отличаются от резидентских и серверных прокси</h2>
+<p>Главное различие трёх типов в двух вещах: чья сеть у адреса и меняется ли адрес. Остальные свойства, включая модель оплаты, из этого следуют.</p>
+<p>В таблице сведены типовые описания со страниц сервисов, на которые ссылается статья. У отдельного сервиса условия могут отличаться, их проверяют на его сайте.</p>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>ISP (статические резидентские)</th>
+<th>Резидентские с ротацией</th>
+<th>Серверные IPv4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сеть адреса</td>
+<td>интернет-провайдер</td>
+<td>интернет-провайдер</td>
+<td>хостинг, дата-центр</td>
+</tr>
+<tr>
+<td>Где работает адрес</td>
+<td>сервер в дата-центре</td>
+<td>подключения пользователей</td>
+<td>сервер в дата-центре</td>
+</tr>
+<tr>
+<td>Меняется ли IP</td>
+<td>нет, на срок аренды</td>
+<td>по таймеру или на запрос</td>
+<td>нет, на срок аренды</td>
+</tr>
+<tr>
+<td>Типовая модель оплаты</td>
+<td>за IP и срок</td>
+<td>за трафик</td>
+<td>за IP и срок</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Резидентские прокси Proxys.io описывает на <a href="https://proxys.io/ru/residential" rel="nofollow noopener" target="_blank">странице резидентских прокси</a> как «IP-адреса настоящих пользователей, полученные от провайдеров домашнего интернета (ISP)». Ротация там настраивается по таймеру от 2 до 60 минут, а платите вы за объём данных, без лимитов по IP или времени.</p>
+<p>ISP-тариф того же сервиса устроен иначе. На <a href="https://proxys.io/ru/isp-proxies" rel="nofollow noopener" target="_blank">странице ISP-прокси Proxys.io</a> написано: «В данном тарифе продаются только статические IP», а тариф определяют количество адресов и период.</p>
+<p>Сравнение по типу с серверными адресами удобнее вести в <a href="/reiting/servernye-proksi-ipv4/">рейтинге серверных прокси IPv4</a>, а с ротацией в <a href="/reiting/rezidentskie-proksi/">рейтинге резидентских прокси</a>. Мобильные прокси выделены в <a href="/reiting/mobilnye-proksi/">отдельный рейтинг мобильных прокси</a>.</p>
+<h2 id="servisy-ponimayut-termin-isp-po-raznomu">Сервисы понимают термин ISP по-разному</h2>
+<p>Единого определения ISP прокси у сервисов нет, поэтому название тарифа ничего не обещает. Перед сравнением прочитайте на странице сервиса три вещи: меняется ли IP, как считается оплата и можно ли выбрать сеть.</p>
+<p>Так ISP понимают PapaProxy, Proxys.io и FineProxy: статический адрес на срок аренды. На странице <a href="https://fineproxy.org/ru/proxy/static-residential-proxies/" rel="nofollow noopener" target="_blank">статических резидентских прокси FineProxy</a> сказано: «IP статический (не меняется)», и плата берётся за IP, а не за гигабайты.</p>
+<p>Встречается и другой вариант. На странице <a href="https://rucaptcha.com/proxy/isp-proxies" rel="nofollow noopener" target="_blank">ISP-прокси RuCaptcha</a> раздел называется «ISP прокси с ротацией». Время жизни IP там задаётся от 0 до 120 минут, при значении 0 каждый запрос идёт через новый адрес, а цена связана с объёмом купленного трафика. Та же страница допускает выбор адресов по ASN.</p>
+<p>Получается, что под одним словом продают два разных режима:</p>
+<ul>
+<li>статический адрес из сети провайдера с оплатой за IP и срок;</li>
+<li>адреса из сетей провайдеров с ротацией и оплатой за трафик.</li>
+</ul>
+<p>Если вам нужен закреплённый адрес, ищите на странице слова «статический» и «на срок аренды». Если сервис пишет о времени жизни IP и оплате за гигабайты, по устройству это ближе к резидентским с ротацией.</p>
+<h2 id="kogda-isp-proksi-podhodyat-pod-zadachu-a-kogda-net">Когда ISP прокси подходят под задачу, а когда нет</h2>
+<p>ISP прокси выбирают, когда адрес должен оставаться одним и тем же неделями, а сеть провайдера для задачи важнее, чем объём пула. Если нужно много разных адресов и частая смена, удобнее резидентские с ротацией.</p>
+<p>ISP подходят в таких задачах:</p>
+<ul>
+<li>регулярный съём позиций в поиске из одного и того же региона, когда важна сопоставимость результатов по дням;</li>
+<li>мониторинг цен и наличия на маркетплейсе из закреплённого города;</li>
+<li>тест своих сайтов и рекламных посадочных, когда адрес нужно внести в список разрешённых на стенде;</li>
+<li>длинные цепочки запросов, где сайт хранит выбранный город или фильтры в сессии.</li>
+</ul>
+<p>Ротация удобнее, когда запросы независимы друг от друга и их много: карточки товаров, страницы каталога, отдельные URL. Чем распределять поток по большому пулу, разобрано в статье <a href="/stati/proksi-dlya-parsinga/">о прокси для парсинга</a>.</p>
+<p>Условный пример: компании нужно раз в сутки снимать позиции по пяти городам. Со статическими адресами это пять IP, по одному на город, и каждый день запросы идут с того же адреса. С ротацией город сохранится, если сервис даёт выбор города, но адрес при каждом съёме будет новым.</p>
+<p>Отдельная оговорка про «домашний» вид адреса. ProxyWing на <a href="https://proxywing.com/ru/proxies-isp" rel="nofollow noopener" target="_blank">странице ISP-прокси</a> пишет, что сайты воспринимают такие адреса как обычные домашние подключения. Как именно ваш источник относит адрес к домашним или серверным, со страницы сервиса не узнать: это видно только на тесте с вашим темпом запросов.</p>
+<h2 id="chto-pokazyvayut-dannye-reytinga-po-isp-i-rezidentskim">Что показывают данные рейтинга по ISP и резидентским</h2>
+<p>На 28 октября 2026 ISP (статические резидентские) подтвердили 18 из 30 сервисов рейтинга, это больше половины. Прямо пишут, что такого типа нет, 4 сервиса, у 8 на сайте не нашли ни да, ни нет.</p>
+<p>Условие засчитано, только если оно написано на сайте самого сервиса. «Не нашли» значит, что на сайте сервиса не нашли ни подтверждения, ни отказа. Это не то же самое, что «нет».</p>
+<p>В таблице собраны условия, связанные с темой статьи, по данным рейтинга на 28 октября 2026.</p>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th>Условие</th>
+<th>Подтвердили</th>
+<th>Прямо пишут «нет»</th>
+<th>Не нашли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISP (статические резидентские)</td>
+<td>18</td>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Резидентские</td>
+<td>23</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Серверные IPv4</td>
+<td>28</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Выбор оператора или ASN</td>
+<td>21</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Sticky-сессии</td>
+<td>25</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Первые десять сервисов из тех, что подтвердили ISP, в порядке места в рейтинге:</p>
+<div class="tbl-wrap">
+<table>
+<thead>
+<tr>
+<th>Место</th>
+<th>Сервис</th>
+<th>Резидентские</th>
+<th>Серверные IPv4</th>
+<th>Выбор ASN</th>
+<th>Sticky-сессии</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="/servis/proxy-market/">Proxy.Market</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="/servis/proxymania-su/">ProxyMania</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="/servis/papaproxy-net/">PapaProxy</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>нет</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="/servis/proxy-seller-com/">Proxy-Seller</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="/servis/geonix-com/">Geonix</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="/servis/fineproxy-org/">FineProxy</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>не нашли</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="/servis/proxy-solutions-net/">Proxy-Solutions</a></td>
+<td>нет</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="/servis/proxy-ipv4-com/">Proxy-IPv4</a></td>
+<td>не нашли</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="/servis/asocks-com/">ASocks</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="/servis/rucaptcha-com/">RuCaptcha Proxy</a></td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+<td>есть</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>«Нет» в таблице означает, что сервис прямо пишет об отсутствии условия на своём сайте. Полный список из 18 сервисов с ISP собран в рейтинге этого типа.</p>
+<p>Прямо пишут, что ISP-адресов нет: <a href="/servis/froxy-com/">Froxy</a>, <a href="/servis/astroproxy-com/">Astroproxy</a>, <a href="/servis/proxyline-net/">ProxyLine</a> и <a href="/servis/proxy6-net/">Proxy6</a>.</p>
+<p>Наличие типа на сайте ничего не говорит о скорости и доле успешных запросов. Рейтинг их пока не измеряет, это следующий этап, описанный в <a href="/metodika/">методике</a>.</p>
+<h2 id="kak-proverit-isp-adres-samomu">Как проверить ISP-адрес самому</h2>
+<p>Проверить, из чьей сети адрес, можно по открытым данным регистратуры. Для этого нужен сам IP, который видит сайт при запросе через прокси.</p>
+<p>Шаги такие:</p>
+<ul>
+<li>откройте любой сервис, который показывает ваш внешний IP, с включённым прокси и запишите адрес;</li>
+<li>найдите этот адрес в <a href="https://www.ripe.net/manage-ips-and-asns/db/" rel="nofollow noopener" target="_blank">базе данных RIPE</a>: по описанию RIPE NCC, она содержит регистрационные сведения о сетях в регионе обслуживания и контакты, а запрос можно сделать через веб-интерфейс, REST API или командную строку;</li>
+<li>посмотрите, какая AS анонсирует префикс адреса, через <a href="https://stat.ripe.net/docs/data-api/api-endpoints/prefix-overview" rel="nofollow noopener" target="_blank">вызов Prefix Overview в RIPEstat</a>: он возвращает признак анонса и список ASN-источников с названием держателя;</li>
+<li>сравните название держателя сети с тем, что обещает страница сервиса: провайдер связи или хостинг.</li>
+</ul>
+<p>Проверка показывает регистрацию и маршрут, но не то, как адрес оценивает конкретный сайт. Поэтому после неё проведите короткий тест на своём источнике с тем же темпом и городами, что и в работе. Как организовать пробную закупку и что сверить в условиях до оплаты, описано в статье <a href="/stati/kak-vybrat-proksi-dlya-kompanii/">о выборе прокси для компании</a>.</p>
+</div>
+<section class="faq"><h2>Вопросы и ответы</h2><details class='qa'><summary>Что такое ISP прокси?</summary><div>Это прокси с IP-адресом, который зарегистрирован в сети интернет-провайдера, но работает на сервере в дата-центре. У PapaProxy, FineProxy и Proxys.io такой адрес статический и закреплён за клиентом на срок аренды. Поэтому сервисы называют их ещё статическими резидентскими.</div></details><details class='qa'><summary>Чем ISP прокси отличаются от резидентских?</summary><div>Резидентские прокси с ротацией берут адреса подключений пользователей, адрес меняется по таймеру или на каждый запрос, а у Proxys.io, например, оплата идёт за объём трафика. ISP-адрес работает на сервере, не меняется на срок аренды и в ISP-тарифах Proxys.io и FineProxy оплачивается за количество IP и период.</div></details><details class='qa'><summary>Что выбрать: ISP или резидентские прокси?</summary><div>ISP удобнее, когда один и тот же адрес нужен неделями: регулярный съём позиций из одного региона, тест своих сайтов со списком разрешённых адресов, длинные сессии. Резидентские с ротацией удобнее для большого числа независимых запросов, когда нужен пул разных адресов. Окончательный выбор подтверждает тест на вашем источнике.</div></details><details class='qa'><summary>Как проверить, что прокси действительно ISP?</summary><div>Узнайте внешний IP при включённом прокси и найдите его в базе данных RIPE. Затем посмотрите в RIPEstat, какая автономная система анонсирует префикс и как называется её держатель. Если держатель сети провайдер связи, а не хостинг, адрес относится к сети провайдера.</div></details></section>
+<section class="art-src"><h2>Источники</h2><ol><li><a href="https://www.rfc-editor.org/rfc/rfc1930.html" rel="nofollow noopener" target="_blank">RFC Editor: RFC 1930, Guidelines for creation, selection, and registration of an Autonomous System</a> <span>— rfc-editor.org · дата обращения: 18 ноября 2026</span></li><li><a href="https://www.ripe.net/about-us/what-we-do/" rel="nofollow noopener" target="_blank">RIPE NCC: What We Do</a> <span>— ripe.net · дата обращения: 18 ноября 2026</span></li><li><a href="https://www.ripe.net/manage-ips-and-asns/as-numbers/" rel="nofollow noopener" target="_blank">RIPE NCC: AS Numbers</a> <span>— ripe.net · дата обращения: 18 ноября 2026</span></li><li><a href="https://www.ripe.net/manage-ips-and-asns/db/" rel="nofollow noopener" target="_blank">RIPE NCC: RIPE Database</a> <span>— ripe.net · дата обращения: 18 ноября 2026</span></li><li><a href="https://stat.ripe.net/docs/data-api/api-endpoints/prefix-overview" rel="nofollow noopener" target="_blank">RIPEstat: Data API, Prefix Overview</a> <span>— stat.ripe.net · дата обращения: 18 ноября 2026</span></li><li><a href="https://papaproxy.net/ru/isp-proxy.php" rel="nofollow noopener" target="_blank">PapaProxy: ISP-прокси</a> <span>— papaproxy.net · дата обращения: 18 ноября 2026</span></li><li><a href="https://proxys.io/ru/residential" rel="nofollow noopener" target="_blank">Proxys.io: резидентские прокси</a> <span>— proxys.io · дата обращения: 18 ноября 2026</span></li><li><a href="https://proxys.io/ru/isp-proxies" rel="nofollow noopener" target="_blank">Proxys.io: ISP-прокси</a> <span>— proxys.io · дата обращения: 18 ноября 2026</span></li><li><a href="https://fineproxy.org/ru/proxy/static-residential-proxies/" rel="nofollow noopener" target="_blank">FineProxy: статические резидентные прокси</a> <span>— fineproxy.org · дата обращения: 18 ноября 2026</span></li><li><a href="https://rucaptcha.com/proxy/isp-proxies" rel="nofollow noopener" target="_blank">RuCaptcha: ISP-прокси</a> <span>— rucaptcha.com · дата обращения: 18 ноября 2026</span></li><li><a href="https://proxywing.com/ru/proxies-isp" rel="nofollow noopener" target="_blank">ProxyWing: ISP-прокси</a> <span>— proxywing.com · дата обращения: 18 ноября 2026</span></li></ol></section>
+<section class="art-rel"><h2>Ещё по теме</h2><div class="art-list"><a class="art-card" href="/stati/proksi-dlya-parsinga/"><span class="art-meta">гайд · 16 ноября 2026</span><b>Прокси для парсинга: какой тип выбрать под задачу</b><span>Какие прокси нужны для парсинга: серверные, ротационные или резидентские, ротация и sticky, оплата за трафик, scraping API и данные о 30 сервисах.</span></a><a class="art-card" href="/stati/kak-vybrat-proksi-dlya-kompanii/"><span class="art-meta">гайд · 31 октября 2026</span><b>Как выбрать прокси для компании: задача, тип, условия</b><span>Порядок выбора прокси для компании: задача, тип адресов, условия сервиса для юрлиц, тест на своей площадке и данные о 30 сервисах.</span></a><a class="art-card" href="/stati/kak-kupit-proksi-na-yurlico/"><span class="art-meta">инструкция · 13 ноября 2026</span><b>Как купить прокси на юрлицо: счёт, договор, документы</b><span>Шесть шагов покупки прокси компанией: оплата по счёту, оферта или договор, акт и УПД, ЭДО. Плюс данные о счёте и документах у 30 сервисов.</span></a></div></section>
+<aside class="art-cta"><b>Сравните сервисы по проверяемым условиям</b><p>В открытом рейтинге — 30 прокси-сервисов для бизнеса и 23 условия: оплата по счёту, ЭДО, гарантии, типы прокси, API. Каждый факт — со ссылкой на сайт сервиса и датой проверки.</p><p><a class="btn" href="/">Открыть рейтинг</a> <a class="btn ghost" href="/metodika/">Как считаем баллы</a></p></aside>
+</article>
+<aside class="art-side"><nav class="toc toc-side" aria-label="Содержание"><p class="toc-h">Содержание</p><ol><li><a href="#chto-takoe-isp-proksi-prostymi-slovami">Что такое ISP прокси простыми словами</a></li><li><a href="#kak-ustroen-adres-i-pri-chem-zdes-asn">Как устроен адрес и при чём здесь ASN</a></li><li><a href="#chem-isp-otlichayutsya-ot-rezidentskih-i-servernyh-proksi">Чем ISP отличаются от резидентских и серверных прокси</a></li><li><a href="#servisy-ponimayut-termin-isp-po-raznomu">Сервисы понимают термин ISP по-разному</a></li><li><a href="#kogda-isp-proksi-podhodyat-pod-zadachu-a-kogda-net">Когда ISP прокси подходят под задачу, а когда нет</a></li><li><a href="#chto-pokazyvayut-dannye-reytinga-po-isp-i-rezidentskim">Что показывают данные рейтинга по ISP и резидентским</a></li><li><a href="#kak-proverit-isp-adres-samomu">Как проверить ISP-адрес самому</a></li></ol></nav><div class="side-box"><p class="toc-h">Первая пятёрка рейтинга</p><ol class="side-top"><li><span class="rk rk1">1</span><a href="/servis/proxy-market/">Proxy.Market</a><b>97</b></li><li><span class="rk rk2">2</span><a href="/servis/mobileproxy-space/">MobileProxy.Space</a><b>83</b></li><li><span class="rk rk3">3</span><a href="/servis/proxeon-net/">Proxeon</a><b>83</b></li><li><span class="rk">4</span><a href="/servis/proxymania-su/">ProxyMania</a><b>83</b></li><li><span class="rk">5</span><a href="/servis/papaproxy-net/">PapaProxy</a><b>78</b></li></ol><a href="/">Все 30 сервисов →</a></div><a class="side-box side-pdf" href="/otchet/"><b>Отчёт в PDF</b><span>Рейтинг, карточки и методика одним файлом</span></a></aside>
+</div>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <div class="logo small"><img class="logo-mark" src="/logo-mark.svg" width="44" height="44" alt=""><span><span class="wm">ПроксиИндекс</span><small class="tagline">Рейтинг прокси для бизнеса</small></span></div>
+      <p>Открытый рейтинг прокси-сервисов для бизнеса в России. Каждый балл — факт с сайта сервиса со ссылкой и датой проверки.</p>
+      <p class="muted">Личный проект, автор — Сергей. <a href="/o-proekte/">Об авторе</a> · обновлено 18 ноября 2026.</p>
+    </div>
+    <div class="foot-links">
+      <a href="/metodika/">Методика</a>
+      <a href="/o-proekte/">Об авторе</a>
+      <a href="/o-proekte/#ispravit">Исправить данные о сервисе</a>
+      <a href="/sitemap.xml">Карта сайта</a>
+    </div>
+  </div>
+</footer>
+<script src="/app.js?v=fd2eb3a0dc" defer></script>
+
+</body>
+</html>
